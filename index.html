@@ -1,0 +1,105 @@
+<html lang="en" style="font-size: 10px" webcrx="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turn em Down</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+  </head>
+  <body>
+    <div id="registration-menu">
+      <h2 class="register-name">Create Your Character</h2>
+      <label for="nickname" class="label-character" >Character Name</label>
+      <input type="text" id="nickname">
+      <button id="register-button" disabled>Create Character</button>
+  </div>
+    <div id="root">
+      <div class="HomePageContainer">
+        <div class="ToolBarContainer">
+          <div class="ToolBar-LeftSide">
+            <span class="PageTitle" id="Page-Title">Main</span>
+          </div>
+          <div class="tab-icons">
+            <img  data-title="Main"
+              data-testid="icon"
+              class="tablink"
+              src="../assets/icons/home.svg"
+              alt="icon"
+              onclick="openTab(event, 'content1')"
+            /><img  data-title="Character"
+              data-testid="icon"
+              class="tablink"
+              src="../assets/icons/character.svg"
+              alt="icon"
+              onclick="openTab(event, 'content2')"
+            /><img data-title="Settings"
+              data-testid="icon"
+              class="tablink"
+              src="../assets/icons/settings.svg"
+              alt="icon"
+              onclick="openTab(event, 'content3')"
+            />
+          </div>
+        </div>
+        <div class="Page content1">
+          <div class="MainPageContainer">
+            <button class="ButtonContainer" onclick="toggleContent()" id="FightButton">Fight!</button>
+          </div>
+        </div>
+        <div class="Page content2" >
+          <div class="CharacterPageContainer">
+            <div class="default-images">
+              <img id="current-image" src="../assets/chracter/0e12766e9537ddde1b979acd31d0be71.jpg" alt="Current Image" />
+          </div>
+      
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <div class="image-option" data-image="../assets/chracter/118df1f8966ebf9a72b3bfb3e4e10170.jpg">
+                      <img src="../assets/chracter/118df1f8966ebf9a72b3bfb3e4e10170.jpg" alt="Image 1">
+                  </div>
+                  <div class="image-option" data-image="../assets/chracter/ceb100559bd5090fa306cf38c04f8db5.jpg">
+                      <img src="../assets/chracter/ceb100559bd5090fa306cf38c04f8db5.jpg" alt="Image 2">
+                  </div>
+                  <div class="image-option" data-image="../assets/chracter/0e12766e9537ddde1b979acd31d0be71.jpg">
+                      <img src="../assets/chracter/0e12766e9537ddde1b979acd31d0be71.jpg" alt="Image 3">
+                  </div>
+              </div>
+          </div>
+
+            <div class="CharacterInformatione">
+              <span class="CharacterInformation__Name"></span>
+            <div class="CharacterInformation__Data--Results">
+            <span class="CharacterInformation__Data--Results-Wins">Wins: 1</span>
+            <span class="CharacterInformation__Data--Results-Loses">Loses: 2</span>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="Page content3">
+          <span class="EditaLabel">Player Name:&#32;</span>
+          <div id="characterInfo">
+            <span class="CharacterInformation__Name" id="playerName"></span>
+            <button class="EditButtonContainer" id="editButton">Edit</button>
+        </div>
+        <div id="editContainer" class="hidden">
+            <input type="text" id="editNickname">
+            <button id="saveButton">Save</button>
+        </div>
+        </div>
+        <div class="Page content4" id="fight">
+         <div class="player-fight">
+          <span class="CharacterInformation__Name"></span>
+          <img id="current-image" src="../assets/chracter/0e12766e9537ddde1b979acd31d0be71.jpg" alt="Current Image" />
+         </div>
+        </div>
+        </div>
+      </div>
+    <script src="../JavaScript/main.js"></script>
+  </body>
+</html>
+
+<!-- <div class="EditPageContent">
+  <span class="EditaLabel">Player Name:&#32;
+    <span class="CharacterInformation__Name">Senju</span> </span>
+  <button class="EditButtonContainer" id="editButton"> Edit</button>
+</div> -->
